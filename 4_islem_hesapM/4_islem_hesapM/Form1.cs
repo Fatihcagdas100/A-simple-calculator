@@ -111,8 +111,11 @@ namespace _4_islem_hesapM
 
         private void button11_Click(object sender, EventArgs e)//   =
         {
-            sayi2 = Convert.ToDouble(textBox1.Text);
-            textBox1.Clear();
+            if(textBox1.Text != "")
+            {
+                sayi2 = Convert.ToDouble(textBox1.Text);
+                textBox1.Clear();
+            }
 
             if (sayi2 == 0) // 0 a bölünme hatasý
                 textBox1.Text = "Belirsiz!";
